@@ -1,0 +1,17 @@
+{
+  "classroom": "#CDCDCD",
+  "library": "#7DBCAB",
+  "laboratory": "#C4E48F",
+  "cafe": "#C3A08D",
+  "mess": "#EF6B00",
+  "hall": "#DFA2DE",
+  "gym": "#75CF75",
+  "auditorium": "#B684EA",
+  "workshop": "#888888",
+  "WC": "#85AEE2",
+  "circulation": "#FFFE6E",
+  "administrative": "#FFA8A7",
+  "teacherslounge": "#FFDCBA",
+  "headmasters": "#2C59E3",
+  "counseling": "#B4E3D7"
+}

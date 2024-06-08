@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>ArchSolvED</title>
+    <script src="muscle.js"></script>
+
+</head>
+<body onload="check_student_density()">
+<h1>ArchSolvED</h1>
+<h1>School Type and Climate Selection</h1>
+<form action="/set_requirements_list" method="post">
+    <input id="process_id" name="process_id" type="hidden" value="{process_id}">
+    <label for="land_area">Area of the given land (square meters): </label>
+    <input disabled id="land_area" name="land_area" type="number" value="{area}">
+    <br>
+    <br>
+    <label for="curriculum">School type: </label>
+    <select id="curriculum" name="curriculum">
+        <option value="1">Primary School</option>
+        <option value="2">Middle School</option>
+        <option value="3">High School</option>
+    </select>
+    <br>
+    <br>
+    <label for="province">Climate type or Province: </label>
+    <select id="province" name="province">
+        <option value="82">Cold Climate</option>
+        <option value="83">Humid Climate</option>
+        <option value="84">Hot-Dry Climate</option>
+        <option value="85">Hot-Humid Climate</option>
+        <option value="1">Adana</option>
+        <option value="2">Adiyaman</option>
+        <option value="3">Afyon</option>
+        <option value="4">Agri</option>
+        <option value="5">Amasya</option>
+        <option value="6">Ankara</option>
+        <option value="7">Antalya</option>
+        <option value="8">Artvin</option>
+        <option value="9">Aydin</option>
+        <option value="10">Balikesir</option>
+        <option value="11">Bilecik</option>
+        <option value="12">Bingol</option>
+        <option value="13">Bitlis</option>
+        <option value="14">Bolu</option>
+        <option value="15">Burdur</option>
+        <option value="16">Bursa</option>
+        <option value="17">Canakkale</option>
+        <option value="18">Cankiri</option>
+        <option value="19">Corum</option>
+        <option value="20">Denizli</option>
+        <option value="21">Diyarbakir</option>
+        <option value="22">Edirne</option>
+        <option value="23">Elazig</option>
+        <option value="24">Erzincan</option>
+        <option value="25">Erzurum</option>
+        <option value="26">Eskisehir</option>
+        <option value="27">Gaziantep</option>
+        <option value="28">Giresun</option>
+        <option value="29">Gumushane</option>
+        <option value="30">Hakkari</option>
+        <option value="31">Hatay</option>
+        <option value="32">Isparta</option>
+        <option value="33">Mersin</option>
+        <option value="34">Istanbul</option>
+        <option value="35">Izmir</option>
+        <option value="36">Kars</option>
+        <option value="37">Kastamonu</option>
+        <option value="38">Kayseri</option>
+        <option value="39">Kirklareli</option>
+        <option value="40">Kirsehir</option>
+        <option value="41">Kocaeli</option>
+        <option value="42">Konya</option>
+        <option value="43">Kutahya</option>
+        <option value="44">Malatya</option>
+        <option value="45">Manisa</option>
+        <option value="46">Kahramanmaras</option>
+        <option value="47">Mardin</option>
+        <option value="48">Mugla</option>
+        <option value="49">Mus</option>
+        <option value="50">Nevsehir</option>
+        <option value="51">Nigde</option>
+        <option value="52">Ordu</option>
+        <option value="53">Rize</option>
+        <option value="54">Sakarya</option>
+        <option value="55">Samsun</option>
+        <option value="56">Siirt</option>
+        <option value="57">Sinop</option>
+        <option value="58">Sivas</option>
+        <option value="59">Tekirdag</option>
+        <option value="60">Tokat</option>
+        <option value="61">Trabzon</option>
+        <option value="62">Tunceli</option>
+        <option value="63">Sanliurfa</option>
+        <option value="64">Usak</option>
+        <option value="65">Van</option>
+        <option value="66">Yozgat</option>
+        <option value="67">Zonguldak</option>
+        <option value="68">Aksaray</option>
+        <option value="69">Bayburt</option>
+        <option value="70">Karaman</option>
+        <option value="71">Kirikkale</option>
+        <option value="72">Batman</option>
+        <option value="73">Sirnak</option>
+        <option value="74">Bartin</option>
+        <option value="75">Ardahan</option>
+        <option value="76">Igdir</option>
+        <option value="77">Yalova</option>
+        <option value="78">Karabuk</option>
+        <option value="79">Kilis</option>
+        <option value="80">Osmaniye</option>
+        <option value="81">Duzce</option>
+    </select>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <label for="floor_count">Floor count: </label>
+    <input id="floor_count" name="floor_count" type="number" value="4">
+    <br>
+    <br>
+    <label for="class_count">Classroom count: </label>
+    <input id="class_count" max="60" min="4" name="class_count" step="4" type="number" value="4" onchange="check_student_density()">
+    <br>
+    <p>Note: Currently the accepted education system is 4+4+4. Thus the classroom count has increments of 4</p>
+    <hr>
+    <br>
+    <label for="density_standard">Standard for student density:</label>
+    <select id="density_standard" name="density_standard" onchange="check_student_density()">
+        <option value="15">Turkish Standard</option>
+        <option value="30">European Standard</option>
+    </select>
+    <br>
+    <p>Density assessment:</p>
+    <p id="density_message"></p>
+    <br>
+    <input type="submit" value="Next">
+</form>
+</body>
+</html>

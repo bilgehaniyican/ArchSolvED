@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>ArchSolvED</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="muscle.js"></script>
+</head>
+<body onload="update_areas()">
+<h1>ArchSolvED</h1>
+<h1>Building Program</h1>
+<form action="/circulation" method="post">
+    <input id="process_id" name="process_id" type="hidden" value="{process_id}">
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Width</th>
+            <th>Length</th>
+            <th>Count</th>
+            <th>Total Area</th>
+        </tr>
+        <tbody>
+        <tr>
+            <td>Classroom</td>
+            <td><input onchange="update_areas()" id="classroom_width" class="text-input" min="0" name="classroom_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="classroom_length" class="text-input" min="0" name="classroom_length" type="number" value="8"></td>
+            <td><input onchange="update_areas()" id="classroom_count" class="text-input" max="100" min="0" name="classroom_count" readonly step="4" type="number" value="{class_count}"></td>
+            <td class="total-area"><a id="classroom_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Library</td>
+            <td><input onchange="update_areas()" id="library_width" class="text-input" min="0" name="library_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="library_length" class="text-input" min="0" name="library_length" type="number" value="12"></td>
+            <td><input onchange="update_areas()" id="library_count" class="text-input" min="0" name="library_count" type="number" value="{library_count}"></td>
+            <td class="total-area"><a id="library_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Laboratory</td>
+            <td><input onchange="update_areas()" id="laboratory_width" class="text-input" min="0" name="laboratory_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="laboratory_length" class="text-input" min="0" name="laboratory_length" type="number" value="12"></td>
+            <td><input onchange="update_areas()" id="laboratory_count" class="text-input" min="0" name="laboratory_count" type="number" value="{lab_count}"></td>
+            <td class="total-area"><a id="laboratory_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Cafeteria</td>
+            <td><input onchange="update_areas()" id="cafe_width" class="text-input" min="0" name="cafe_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="cafe_length" class="text-input" min="0" name="cafe_length" type="number" value="15"></td>
+            <td><input onchange="update_areas()" id="cafe_count" class="text-input" min="0" name="cafe_count" type="number" value="{cafe_count}"></td>
+            <td class="total-area"><a id="cafe_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Dining Hall</td>
+            <td><input onchange="update_areas()" id="mess_width" class="text-input" min="0" name="mess_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="mess_length" class="text-input" min="0" name="mess_length" type="number" value="15"></td>
+            <td><input onchange="update_areas()" id="mess_count" class="text-input" min="0" name="mess_count" type="number" value="{mess_count}"></td>
+            <td class="total-area"><a id="mess_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Multi-Purpose Hall</td>
+            <td><input onchange="update_areas()" id="hall_width" class="text-input" min="0" name="hall_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="hall_length" class="text-input" min="0" name="hall_length" type="number" value="20"></td>
+            <td><input onchange="update_areas()" id="hall_count" class="text-input" min="0" name="hall_count" type="number" value="{hall_count}"></td>
+            <td class="total-area"><a id="hall_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Gymnasium</td>
+            <td><input onchange="update_areas()" id="gym_width" class="text-input" min="0" name="gym_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="gym_length" class="text-input" min="0" name="gym_length" type="number" value="20"></td>
+            <td><input onchange="update_areas()" id="gym_count" class="text-input" min="0" name="gym_count" type="number" value="{gym_count}"></td>
+            <td class="total-area"><a id="gym_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>
+                Auditorium</td>
+            <td><input onchange="update_areas()" id="auditorium_width" class="text-input" min="0" name="auditorium_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="auditorium_length" class="text-input" min="0" name="auditorium_length" type="number" value="20"></td>
+            <td><input onchange="update_areas()" id="auditorium_count" class="text-input" min="0" name="auditorium_count" type="number" value="{auditorium_count}"></td>
+            <td class="total-area"><a id="auditorium_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Workshop</td>
+            <td><input onchange="update_areas()" id="workshop_width" class="text-input" min="0" name="workshop_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="workshop_length" class="text-input" min="0" name="workshop_length" type="number" value="12"></td>
+            <td><input onchange="update_areas()" id="workshop_count" class="text-input" min="0" name="workshop_count" type="number" value="{workshop_count}"></td>
+            <td class="total-area"><a id="workshop_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>WC</td>
+            <td><input onchange="update_areas()" id="WC_width" class="text-input" min="0" name="WC_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="WC_length" class="text-input" min="0" name="WC_length" type="number" value="3"></td>
+            <td><input onchange="update_areas()" id="WC_count" class="text-input" min="0" name="WC_count" type="number" value="{WC_count}"></td>
+            <td class="total-area"><a id="WC_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Circulation</td>
+            <td><input onchange="update_areas()" id="circulation_width" class="text-input" min="0" name="circulation_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="circulation_length" class="text-input" min="0" name="circulation_length" type="number" value="15"></td>
+            <td><input onchange="update_areas()" id="circulation_count" class="text-input" min="0" name="circulation_count" type="number" value="{circulation_count}"></td>
+            <td class="total-area"><a id="circulation_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Administrative</td>
+            <td><input onchange="update_areas()" id="administrative_width" class="text-input" min="0" name="administrative_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="administrative_length" class="text-input" min="0" name="administrative_length" type="number" value="4"></td>
+            <td><input onchange="update_areas()" id="administrative_count" class="text-input" min="0" name="administrative_count" type="number" value="{administrative_count}"></td>
+            <td class="total-area"><a id="administrative_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Counseling Room</td>
+            <td><input onchange="update_areas()" id="counseling_width" class="text-input" min="0" name="counseling_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="counseling_length" class="text-input" min="0" name="counseling_length" type="number" value="4"></td>
+            <td><input onchange="update_areas()" id="counseling_count" class="text-input" min="0" name="counseling_count" type="number" value="{counseling_count}"></td>
+            <td class="total-area"><a id="counseling_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Teachers' Room</td>
+            <td><input onchange="update_areas()" id="teacherslounge_width" class="text-input" min="0" name="teacherslounge_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="teacherslounge_length" max="15" class="text-input" min="0" name="teacherslounge_length" type="number" value="11"></td>
+            <td><input onchange="update_areas()" id="teacherslounge_count" class="text-input" min="0" name="teacherslounge_count" type="number" value="{teacherslounge_count}"></td>
+            <td class="total-area"><a id="teacherslounge_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Principal's Office</td>
+            <td><input onchange="update_areas()" id="headmasters_width" class="text-input" min="0" name="headmasters_width" type="number" value="7"></td>
+            <td><input onchange="update_areas()" id="headmasters_length" class="text-input" min="0" name="headmasters_length" type="number" value="5"></td>
+            <td><input onchange="update_areas()" id="headmasters_count" class="text-input" min="0" name="headmasters_count" type="number" value="{headmasters_count}"></td>
+            <td class="total-area"><a id="headmasters_area">0</a> m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>Circulation Ratio %: </td>
+            <td><input onchange="update_areas()" id="circulation_ratio" name="circulation_ratio" class="text-input" min="0" max="1000" type="number" value="50"></td>
+        </tr>
+        <tr>
+            <td>Total building area</td>
+            <td><b id="total_building_area">0</b> m<sup>2</sup></td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Next">
+</form>
+</body>
+</html>
