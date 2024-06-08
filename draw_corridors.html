@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArchSolvED</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="corridor_drawer.js"></script>
+</head>
+<body onload="init(); show_modal({show_popup})">
+<h1>ArchSolvED</h1>
+<h1>Circulation Drawing</h1>
+<br>
+<a>Total corridor length: </a>
+<a id="total_line_length"></a>
+<a>Remaining corridor length: </a>
+<a id="remaining_line_length"></a>
+<a>Current corridor length: </a>
+<a id="current_line_length"></a>
+<br>
+<button onclick="handle_undo()">Undo</button>
+<button onclick="handle_redo()">Redo</button>
+<button onclick="handle_done()">Finish</button>
+<br>
+<canvas height="1000" id="canvas" onmousemove="handle_move(arguments)" onmouseup="handle_click(arguments)" width="1000"></canvas>
+<form action="/" method="get">
+    <input id="process_id" type="hidden" value="{process_id}">
+    <input id="land_limits" type="hidden" value="{land_boundary}">
+    <input id="build_limits" type="hidden" value="{construction_boundary}">
+    <input id="snap_radius" type="hidden" value="{snap_radius}">
+    <input id="required_corridor_length" type="hidden" value="{required_corridor_length}">
+    <input id="meter_unit_conversion_factor" type="hidden" value="{meter_unit_conversion_factor}">
+</form>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <h3>
+          Instructions
+      </h3>
+    <p>
+        - To start drawing a corridor, click inside the area withing set-back boundaries.<br><br>
+        - To finish drawing, click another point.<br><br>
+        - It is not possible to draw outside set-back boundaries.<br><br>
+        - To draw a corridor connected to existing ones, bring your cursor to start/end points of other corridors which
+        will cause it to snap to the point.<br><br>
+        - To undo and redo an action, buttons above can be used.<br><br>
+        - Above the drawer, total length of the drawn corridors, remaining corridor length to draw and length of the
+        corridor that is being drawn is shown.<br><br>
+        - Total length of the drawn corridors should be higher than required length.<br><br>
+        - To produce a solvable circulation, draw corridors that are longer than the longest sub-unit.<br><br>
+        - It is possible to create separate buildings by having non-connected chains of corridors, but collusion of
+        sub-units after they will be placed should be considered.<br><br>
+        - Click finish when you are satisfied with the design.<br><br>
+    </p>
+    <button onclick="hide_modal()">Close</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArchSolvED</title>
+    <script id="land_boundary">{land_boundary}</script>
+    <script id="construction_boundary">{construction_boundary}</script>
+    <script id="corridors">{corridors}</script>
+    <script src="muscle.js"></script>
+</head>
+<body onload="show_corridors()">
+<h1>ArchSolvED</h1>
+<h1>Circulation</h1>
+<form action="/show_result" method="post">
+    <input id="process_id" name="process_id" type="hidden" value="{process_id}">
+    <input type="submit" value="Next">
+</form>
+<br>
+<canvas height="{dimension}" id="canvas" width="{dimension}">
+</canvas>
+</body>
+</html>

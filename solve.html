@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArchSolvED</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="muscle.js"></script>
+    <script id="legend-data">
+        {legend_data}
+    </script>
+    <script id="data">
+        {data}
+    </script>
+</head>
+<body onload="on_result_page_load()">
+<h1>ArchSolvED</h1>
+<h1>Results</h1>
+<form action="/circulation" method="post">
+    <input id="process_id" name="process_id" type="hidden" value="{process_id}">
+    <input id="submit" name="submit" type="submit" value="Go back to circulation drawer">
+</form>
+<h3>Legend</h3>
+<div id="legend" style="border: 1em black; display: flex; flex-wrap: wrap;">
+</div>
+<hr>
+<h3>Results</h3>
+<table id="results" style="border-collapse: collapse">
+</table>
+</body>
+</html>

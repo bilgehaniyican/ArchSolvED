@@ -1,0 +1,512 @@
+[
+  {
+    "PLAKA": 1,
+    "IL ADI": "ADANA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 2,
+    "IL ADI": "ADIYAMAN",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 3,
+    "IL ADI": "AFYON",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 4,
+    "IL ADI": "AGRI",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 5,
+    "IL ADI": "AMASYA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 6,
+    "IL ADI": "ANKARA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 7,
+    "IL ADI": "ANTALYA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 8,
+    "IL ADI": "ARTVIN",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 9,
+    "IL ADI": "AYDIN",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 10,
+    "IL ADI": "BALIKESIR",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 11,
+    "IL ADI": "BILECIK",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 12,
+    "IL ADI": "BINGOL",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 13,
+    "IL ADI": "BITLIS",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 14,
+    "IL ADI": "BOLU",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 15,
+    "IL ADI": "BURDUR",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 16,
+    "IL ADI": "BURSA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 17,
+    "IL ADI": "CANAKKALE",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 18,
+    "IL ADI": "CANKIRI",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  },
+  {
+    "PLAKA": 19,
+    "IL ADI": "CORUM",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 20,
+    "IL ADI": "DENIZLI",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 21,
+    "IL ADI": "DIYARBAKIR",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 22,
+    "IL ADI": "EDIRNE",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 23,
+    "IL ADI": "ELAZIG",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 24,
+    "IL ADI": "ERZINCAN",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 25,
+    "IL ADI": "ERZURUM",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 26,
+    "IL ADI": "ESKISEHIR",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 27,
+    "IL ADI": "GAZIANTEP",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 28,
+    "IL ADI": "GIRESUN",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  },
+  {
+    "PLAKA": 29,
+    "IL ADI": "GUMUSHANE",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 30,
+    "IL ADI": "HAKKARI",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 31,
+    "IL ADI": "HATAY",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 32,
+    "IL ADI": "ISPARTA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 33,
+    "IL ADI": "MERSIN",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 34,
+    "IL ADI": "ISTANBUL",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 35,
+    "IL ADI": "IZMIR",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 36,
+    "IL ADI": "KARS",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 37,
+    "IL ADI": "KASTAMONU",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 38,
+    "IL ADI": "KAYSERI",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 39,
+    "IL ADI": "KIRKLARELI",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 40,
+    "IL ADI": "KIRSEHIR",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 41,
+    "IL ADI": "KOCAELI",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  },
+  {
+    "PLAKA": 42,
+    "IL ADI": "KONYA",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 43,
+    "IL ADI": "KUTAHYA",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 44,
+    "IL ADI": "MALATYA",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 45,
+    "IL ADI": "MANISA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 46,
+    "IL ADI": "KAHRAMANMARAS",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 47,
+    "IL ADI": "MARDIN",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 48,
+    "IL ADI": "MUGLA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 49,
+    "IL ADI": "MUS",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 50,
+    "IL ADI": "NEVSEHIR",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 51,
+    "IL ADI": "NIGDE",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  },
+  {
+    "PLAKA": 52,
+    "IL ADI": "ORDU",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 53,
+    "IL ADI": "RIZE",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 54,
+    "IL ADI": "SAKARYA",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 55,
+    "IL ADI": "SAMSUN",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 56,
+    "IL ADI": "SIIRT",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 57,
+    "IL ADI": "SINOP",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 58,
+    "IL ADI": "SIVAS",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 59,
+    "IL ADI": "TEKIRDAG",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 60,
+    "IL ADI": "TOKAT",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 61,
+    "IL ADI": "TRABZON",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 62,
+    "IL ADI": "TUNCELI",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 63,
+    "IL ADI": "SANLIURFA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 64,
+    "IL ADI": "USAK",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 65,
+    "IL ADI": "VAN",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 66,
+    "IL ADI": "YOZGAT",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  },
+  {
+    "PLAKA": 67,
+    "IL ADI": "ZONGULDAK",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 68,
+    "IL ADI": "AKSARAY",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  },
+  {
+    "PLAKA": 69,
+    "IL ADI": "BAYBURT",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 70,
+    "IL ADI": "KARAMAN",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  },
+  {
+    "PLAKA": 71,
+    "IL ADI": "KIRIKKALE",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  },
+  {
+    "PLAKA": 72,
+    "IL ADI": "BATMAN",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 73,
+    "IL ADI": "SIRNAK",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 74,
+    "IL ADI": "BARTIN",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 75,
+    "IL ADI": "ARDAHAN",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 76,
+    "IL ADI": "IGDIR",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 77,
+    "IL ADI": "YALOVA",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 78,
+    "IL ADI": "KARABUK",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 79,
+    "IL ADI": "KILIS",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 80,
+    "IL ADI": "OSMANIYE",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 81,
+    "IL ADI": "DUZCE",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 82,
+    "IL ADI": "COLD",
+    "CLIMATE CODE": "D",
+    "CLIMATE TYPE": "SOGUK"
+  },
+  {
+    "PLAKA": 83,
+    "IL ADI": "HUMID",
+    "CLIMATE CODE": "C",
+    "CLIMATE TYPE": "ILIMAN"
+  },
+  {
+    "PLAKA": 84,
+    "IL ADI": "HOT-DRY",
+    "CLIMATE CODE": "B",
+    "CLIMATE TYPE": "SICAK-KURU"
+  },
+  {
+    "PLAKA": 85,
+    "IL ADI": "HOT-HUMID",
+    "CLIMATE CODE": "A",
+    "CLIMATE TYPE": "SICAK-NEMLI"
+  }
+]

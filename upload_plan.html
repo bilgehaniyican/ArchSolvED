@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArchSolvED</title>
+
+    <script src="muscle.js"></script>
+</head>
+<body>
+<h1>ArchSolvED</h1>
+<h1>Upload Site Plan</h1>
+<form action="/select_curriculum_and_climate" enctype="multipart/form-data" method="post">
+    <input id="process_id" name="process_id" type="hidden" value="{process_id}">
+
+    <label for="sample-file">Use sample file (ignore uploaded file): </label>
+    <input type="checkbox" id="sample-file" name="sample-file" oninput="enable_submit()">
+    <br>
+    <label for="dxf-file">DXF file: </label>
+    <input accept=".dxf" id="dxf-file" name="dxf-file" oninput="enable_submit()" type="file">
+    <br>
+    <input disabled id="submit" type="submit" value="Next">
+</form>
+<br>
+<p>
+   - At this stage, the designer is asked to upload a vector drawing of the site plan where the educational building will be designed.<br><br>
+   - The file format has to be ".dxf" yet the file name may vary <br><br>
+   - Drawing units must be in meters.<br><br>
+   - The boundaries should be defined by an enclosed area with the "POLYGON" command.<br><br>
+   - The software needs definitions of the site boundaries in the drawing file (.dxf) in specific layer names. <br><br>
+   - "siteboundary" and the "setbackboundary" layer names must be used.
+</p>
+</body>
+</html>
