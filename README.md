@@ -32,7 +32,7 @@ Units in the file must be in meters.
 
 Orientation of the site plan must be North facing up.
 
-### Uplad Site Plan
+### Upload Site Plan
 
 In upload stage, the prepared .dxf file should be uploaded.
 
