@@ -28,10 +28,12 @@ class Corridor:
         x = Corridor(self.floor, Line(Point(self.line.a.x, self.line.a.y), Point(point.x, point.y)))
         y = Corridor(self.floor, Line(Point(point.x, point.y), Point(self.line.b.x, self.line.b.y)))
 
-        if x.line.length < 8:
+        from const import PULL_DISTANCE
+
+        if x.line.length < PULL_DISTANCE:
             x = None
 
-        if y.line.length < 8:
+        if y.line.length < PULL_DISTANCE:
             y = None
 
         return x, y

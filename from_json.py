@@ -94,6 +94,10 @@ def save_circulation_run_solver_and_serve_show_results() -> str:
 def muscle():
     return read_html_from_file("muscle.js")
 
+@app.route("/style.css")
+def style():
+    return read_html_from_file("style.css")
+
 
 if __name__ == "__main__":
     app.run(

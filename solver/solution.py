@@ -49,7 +49,7 @@ class Solution:
         for side in self.sides:
             top_floor = max(side.floor + 1, top_floor)
 
-        shapes = []
+        rooms = []
         for side in self.sides:
             lower_point = side.get_lower_point()
             other_point = side.get_other_point()
@@ -65,33 +65,41 @@ class Solution:
                     room.width,
                     color_map[room.type],
                     offset
-                ).to_dict()
+                )
 
                 if side.a_or_b == "a":
                     new_points = []
-                    for point in shape["points"]:
+                    for point in shape.points:
                         new_points.append(mirror(point, (lower_point.x, other_point.x, lower_point.y, other_point.y)))
 
-                    shape["points"] = new_points
+                    shape.points = new_points
 
-                shape["score"] = get_climate_room_scores(self.climate, room.type)[side.facing]
+                shape.score = get_climate_room_scores(self.climate, room.type)[side.facing]
 
-                shapes.append(shape)
+                rooms.append(shape)
 
                 offset += room.length
 
+        corridors = []
         for c in self.draw_corridors:
             for i in range(top_floor):
-                shapes.append(from_corridor(
+                corridors.append(from_corridor(
                     i,
                     c.line.a.x,
                     c.line.a.y,
                     c.line.b.x,
                     c.line.b.y,
                     color_map[RoomType.CIRCULATION]
-                ).to_dict())
+                ))
 
-        return shapes
+        rooms.sort(key=lambda r: r.layer)
+        corridors.sort(key=lambda c: c.layer)
+
+        shapes = []
+        shapes.extend(rooms)
+        shapes.extend(corridors)
+
+        return list(map(lambda s: s.to_dict(), shapes))
 
     def solve_conflicts(self):
         from solver.point import Point
@@ -112,21 +120,21 @@ class Solution:
             new_line2 = Line(Point(line.a.x + x, line.a.y + y), Point(line.b.x + x, line.b.y + y))
 
             def get_line(side, line1, line2):
-                if side.facing == Facing.KB:
+                if side.facing == Facing.KD:
                     return line1 if line1.a.x > side.line.a.x and line1.a.y < side.line.a.y else line2
                 elif side.facing == Facing.K:
                     return line1 if                               line1.a.y < side.line.a.y else line2
-                elif side.facing == Facing.KD:
+                elif side.facing == Facing.KB:
                     return line1 if line1.a.x < side.line.a.x and line1.a.y < side.line.a.y else line2
-                elif side.facing == Facing.D:
+                elif side.facing == Facing.B:
                     return line1 if line1.a.x < side.line.a.x else line2
-                elif side.facing == Facing.GD:
+                elif side.facing == Facing.GB:
                     return line1 if line1.a.x < side.line.a.x and line1.a.y > side.line.a.y else line2
                 elif side.facing == Facing.G:
                     return line1 if                               line1.a.y > side.line.a.y else line2
-                elif side.facing == Facing.GB:
+                elif side.facing == Facing.GD:
                     return line1 if line1.a.x > side.line.a.x and line1.a.y > side.line.a.y else line2
-                elif side.facing == Facing.B:
+                elif side.facing == Facing.D:
                     return line1 if line1.a.x > side.line.a.x else line2
                 else:
                     return line1

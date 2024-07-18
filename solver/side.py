@@ -96,16 +96,16 @@ def get_facing_from_ab_and_tilt(a_or_b, corridor_tilt):
     lookup_table = {
         "a": {
             Tilt.FLAT: Facing.G,
-            Tilt.RIGHT: Facing.GD,
-            Tilt.PERPENDICULAR: Facing.D,
-            Tilt.LEFT: Facing.KD,
+            Tilt.RIGHT: Facing.GB,
+            Tilt.PERPENDICULAR: Facing.B,
+            Tilt.LEFT: Facing.KB,
             Tilt.OTHER_FLAT: Facing.K
         },
         "b": {
             Tilt.FLAT: Facing.K,
-            Tilt.RIGHT: Facing.KB,
-            Tilt.PERPENDICULAR: Facing.B,
-            Tilt.LEFT: Facing.GB,
+            Tilt.RIGHT: Facing.KD,
+            Tilt.PERPENDICULAR: Facing.D,
+            Tilt.LEFT: Facing.GD,
             Tilt.OTHER_FLAT: Facing.G
         }
     }

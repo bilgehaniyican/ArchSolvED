@@ -164,36 +164,41 @@ class DxfParser:
 
 def correct_coordinates(points):
     y_sum = 0
+    x_sum = 0
 
     new_points = {"siteboundary": [], "setbackboundary": [], "corridor": []}
     for point in points["siteboundary"]:
         y_sum += point[1]
+        x_sum += point[0]
 
     for point in points["setbackboundary"]:
         y_sum += point[1]
+        x_sum += point[0]
 
     for start, end in points["corridor"]:
         y_sum += start[1] + end[1]
+        x_sum += start[0] + end[0]
 
     count = len(points["siteboundary"]) + len(points["setbackboundary"]) + 2 * len(points["corridor"])
     if count == 0:
         return None
 
     y_mean = y_sum / count
+    x_mean = x_sum / count
 
     for point in points["siteboundary"]:
-        new_point = (point[0], 2 * y_mean - point[1])
+        new_point = (2 * x_mean - point[0], 2 * y_mean - point[1])
 
         new_points["siteboundary"].append(new_point)
 
     for point in points["setbackboundary"]:
-        new_point = (point[0], 2 * y_mean - point[1])
+        new_point = (2 * x_mean - point[0], 2 * y_mean - point[1])
 
         new_points["setbackboundary"].append(new_point)
 
     for start, end in points["corridor"]:
-        new_start = (start[0], 2 * y_mean - start[1])
-        new_end = (end[0], 2 * y_mean - end[1])
+        new_start = (2 * x_mean - start[0], 2 * y_mean - start[1])
+        new_end = (2 * x_mean - end[0], 2 * y_mean - end[1])
 
         new_line = (new_start, new_end)
 

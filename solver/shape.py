@@ -3,12 +3,14 @@ class Shape:
         self.layer = layer
         self.points = points
         self.color = color
+        self.score = 0
 
     def to_dict(self):
         return {
             "layer": self.layer,
             "points": self.points,
-            "color": self.color
+            "color": self.color,
+            "score": self.score,
         }
 
 
