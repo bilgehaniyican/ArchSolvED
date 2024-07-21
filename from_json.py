@@ -63,8 +63,6 @@ def save_circulation_run_solver_and_serve_show_results() -> str:
     dxf_file = request.args.get("dxf")
     boundaries = DxfParser("dxf/{0}".format(dxf_file)).parse()
 
-    data["boundaries"] = correct_coordinates_x(boundaries)
-
     solutions = School(data).solve()
     solutions = list(
         map(
