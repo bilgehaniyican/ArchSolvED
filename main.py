@@ -135,7 +135,8 @@ def save_requirements_list_and_serve_circulation_drawer() -> str:
         snap_radius=10,
         required_corridor_length=required_corridor_length,
         meter_unit_conversion_factor=scale,
-        show_popup=show_popup
+        show_popup=show_popup,
+        score_data=json.dumps(get_climate_score_json(Database().get_climate(process_id)))
     )
 
 
@@ -178,7 +179,13 @@ def save_circulation_run_solver_and_serve_show_results() -> str:
 
     legend_data = load_legend_data()
 
-    return read_html_from_file("show_result.html").format(process_id=process_id, data=data, legend_data=legend_data, title="ArchSolvED")
+    return read_html_from_file("show_result.html").format(
+        process_id=process_id,
+        data=data,
+        legend_data=legend_data,
+        title="ArchSolvED",
+        score_data=json.dumps(get_climate_score_json(Database().get_climate(process_id)))
+    )
 
 
 @app.route("/corridor_drawer.js")

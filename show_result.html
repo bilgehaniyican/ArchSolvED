@@ -11,6 +11,9 @@
     <script id="data">
         {data}
     </script>
+    <script id="score-data">
+        {score_data}
+    </script>
 </head>
 <body onload="on_result_page_load()">
 <h1>ArchSolvED</h1>
@@ -19,6 +22,28 @@
     <input id="process_id" name="process_id" type="hidden" value="{process_id}">
     <input id="submit" name="submit" type="submit" value="Go back to circulation drawer">
 </form>
+<br>
+<details id="score-details" ontoggle="populate_scores_table()">
+    <summary>Sub-unit orientation score table</summary>
+
+    <table style="border: 1px; border-collapse: collapse;">
+        <thead>
+        <tr>
+            <th></th>
+            <th width="50px" style="text-align: center; border: 1px;">N</th>
+            <th width="50px" style="text-align: center; border: 1px;">NE</th>
+            <th width="50px" style="text-align: center; border: 1px;">E</th>
+            <th width="50px" style="text-align: center; border: 1px;">SE</th>
+            <th width="50px" style="text-align: center; border: 1px;">S</th>
+            <th width="50px" style="text-align: center; border: 1px;">SW</th>
+            <th width="50px" style="text-align: center; border: 1px;">W</th>
+            <th width="50px" style="text-align: center; border: 1px;">NW</th>
+        </tr>
+        </thead>
+        <tbody id="score-table"></tbody>
+    </table>
+</details>
+<br>
 <h3>Legend</h3>
 <div id="legend" style="border: 1em black; display: flex; flex-wrap: wrap;">
 </div>

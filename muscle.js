@@ -242,3 +242,46 @@ function check_student_density() {
         message.innerText = NOK_MESSAGE;
     }
 }
+
+function populate_scores_table() {
+    const details = document.getElementById("score-details");
+    const table_body = document.getElementById("score-table");
+
+    if (details.open) {
+        const json = document.getElementById("score-data").innerText;
+        const data = JSON.parse(json);
+
+        for (const unit of data) {
+            const name = unit.name;
+            const scores = unit.scores;
+
+            const row = table_body.insertRow(-1);
+
+            const name_cell = row.insertCell(-1);
+            name_cell.style.textAlign = "right";
+            name_cell.innerText = name;
+            name_cell.style.border = "1px";
+            name_cell.style.borderStyle = "solid";
+            name_cell.style.paddingRight = "5px";
+
+            for (const score of scores) {
+                const cell = row.insertCell(-1);
+                let score_numeric = parseInt(score);
+                if (score_numeric === 50) {
+                    cell.style.backgroundColor = "#90E0EF";
+                } else if (score_numeric === 100) {
+                    cell.style.backgroundColor = "#48BBDB";
+                }
+
+                cell.width = "10em";
+                cell.style.textAlign = "center";
+                cell.style.border = "1px";
+                cell.style.borderStyle = "solid";
+
+                cell.innerText = score;
+            }
+        }
+    } else {
+        table_body.innerHTML = "";
+    }
+}

@@ -97,6 +97,11 @@ class Database(metaclass=Singleton):
         boundaries = self.storage[key]["boundaries"]
         return boundaries["siteboundary"], boundaries["setbackboundary"], boundaries["corridor"]
 
+    def get_climate(self, key):
+        self.update_access_time(key)
+
+        return self.storage[key]["climate"]
+
     def clear_corridors(self, key):
         self.update_access_time(key)
         self.storage[key]["boundaries"]["corridor"] = []
@@ -355,3 +360,18 @@ def room_name_display(room_name):
     }
 
     return lookup[room_name]
+
+def get_climate_score_json(climate):
+    from solver.school import get_climate_from_string
+    from solver.solution import inner_climate_scores
+
+    names = ["Classroom", "Library", "Laboratory", "Cafeteria", "Dining Hall", "Multi-Purpose Hall", "Gymnasium", "Auditorium", "Workshop", "WC", "Circulation", "Administrative"]
+
+    climate = get_climate_from_string(climate)
+    scores = inner_climate_scores()[climate]
+
+    score_data = []
+    for name, scores in zip(names, scores):
+        score_data.append({"name": name, "scores": scores})
+
+    return score_data
