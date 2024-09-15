@@ -3,6 +3,7 @@ import math
 
 import numpy as np
 
+from solver.enums import RoomType
 from solver.room import get_climate_room_type
 import solver.const as const
 
@@ -32,6 +33,24 @@ class Solution:
 
         for side in self.sides:
             for room in side.rooms:
+                counts[get_climate_room_type(room.type)][side.facing] += 1
+                total_room_count += 1
+
+        counts *= get_climate_scoring(self.climate)
+
+        return counts.sum() / total_room_count
+
+    def get_class_score(self):
+        from solver.enums import ClimateRoomType, Facing
+
+        counts = np.zeros((len(ClimateRoomType), len(Facing)))
+        total_room_count = 0
+
+        for side in self.sides:
+            for room in side.rooms:
+                if room.type != RoomType.CLASSROOM:
+                    continue
+
                 counts[get_climate_room_type(room.type)][side.facing] += 1
                 total_room_count += 1
 

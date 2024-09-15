@@ -169,7 +169,9 @@ def save_circulation_run_solver_and_serve_show_results() -> str:
     with open("json/{0}.json".format(timestamp), "w") as fd:
         json.dump(Database().dump_data(process_id), fd)
 
-    solutions = list(map(lambda e: {"i": e[0], "score": e[1].get_score(), "shapes": e[1].get_shapes()}, enumerate(School(Database().dump_data(process_id)).solve())))
+    solutions = School(Database().dump_data(process_id)).solve()
+    solutions = enumerate(solutions)
+    solutions = list(map(lambda e: {"i": e[0], "score": e[1].get_score(), "shapes": e[1].get_shapes(), "class_score": e[1].get_class_score()}, solutions))
 
     solutions.sort(key=lambda s: s["score"], reverse=True)
     solutions = solutions[:50]

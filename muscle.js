@@ -101,7 +101,20 @@ function insert_element_and_draw(data) {
 }
 
 function do_insert_result(data, text_row, image_row) {
-    text_row.innerHTML = "<td><h3 style='padding: 0.1em'>Solution: " + (data.i + 1).toString() + "</h3></td>" + "<td><h3 style='padding: 0.1em'>Score: " + data.score.toFixed(2) + "</h3></td>" + "<td><button onclick='print_solution(" + data.i + ")'>Print</button></td>" + "<td>↑N</td>";
+    text_row.innerHTML =
+            "<td>" +
+                "<h3 style='padding: 0.1em'>Solution: " + (data.i + 1).toString() + "</h3>" +
+            "</td>" +
+            "<td>" +
+                "<h3 style='padding: 0.1em'>Score: " + data.score.toFixed(2) + "</h3>" +
+                "<h3 style='padding: 0.1em'>Class score: " + data.class_score.toFixed(2) + "</h3>" +
+            "</td>" +
+            "<td>" +
+                "<button onclick='print_solution(" + data.i + ")'>Print</button>" +
+            "</td>" +
+            "<td>" +
+                "↑N" +
+            "</td>";
 
 
     let cells = {};
