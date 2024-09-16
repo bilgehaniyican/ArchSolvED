@@ -28,7 +28,7 @@ class Corridor:
         x = Corridor(self.floor, Line(Point(self.line.a.x, self.line.a.y), Point(point.x, point.y)))
         y = Corridor(self.floor, Line(Point(point.x, point.y), Point(self.line.b.x, self.line.b.y)))
 
-        from const import PULL_DISTANCE
+        from solver.const import PULL_DISTANCE
 
         if x.line.length < PULL_DISTANCE:
             x = None

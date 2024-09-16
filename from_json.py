@@ -3,7 +3,7 @@ import os
 from flask import Flask, request
 
 import json
-from helper import load_legend_data, scale_and_center_result, DxfParser, correct_coordinates_x
+from helper import load_legend_data, scale_and_center_result, DxfParser, get_climate_score_json
 from main import read_html_from_file
 from solver.enums import Climate
 from solver.school import School
@@ -63,10 +63,12 @@ def save_circulation_run_solver_and_serve_show_results() -> str:
     dxf_file = request.args.get("dxf")
     boundaries = DxfParser("dxf/{0}".format(dxf_file)).parse()
 
+    data["boundaries"] = boundaries
+
     solutions = School(data).solve()
     solutions = list(
         map(
-            lambda e: {"i": e[0], "score": e[1].get_score(), "shapes": e[1].get_shapes()},
+            lambda e: {"i": e[0], "score": e[1].get_score(), "shapes": e[1].get_shapes(), "class_score": e[1].get_class_score()},
             enumerate(solutions)
         )
     )
@@ -82,10 +84,17 @@ def save_circulation_run_solver_and_serve_show_results() -> str:
     legend_data = load_legend_data()
 
     score = solutions[0]["score"]
+    class_score = solutions[1]["class_score"]
 
-    title = "{0}_{1}_solution_count_{2}_score_{3}".format(request.args.get("climate"), dxf_file, solution_count, round(score))
+    title = "{0}_{1}_solution_count_{2}_score_{3}_class_score_{4}".format(request.args.get("climate"), dxf_file, solution_count, round(score), class_score)
 
-    return read_html_from_file("show_result.html").format(process_id=0, data=data, legend_data=legend_data, title=title)
+    return read_html_from_file("show_result.html").format(
+        process_id=0,
+        data=data,
+        legend_data=legend_data,
+        title=title,
+        score_data=json.dumps(get_climate_score_json(climate))
+    )
 
 
 @app.route("/muscle.js")
